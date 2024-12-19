@@ -40,8 +40,14 @@ public class Class {
         }
         Learner st = new Learner();
 
-
-
+    Scanner sc = new Scanner(System.in);
+    public void make_class() {
+        System.out.println("enter the of the class :");
+        String name = sc.nextLine();
+        System.out.println("enter Instructor name :");
+        String k = sc.nextLine();
+        st.addlearner();
+    }
         }
 
 
