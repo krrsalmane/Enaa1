@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Class {
         private String className;
@@ -11,6 +12,7 @@ public class Class {
         this.instructor = instructor;
         this.learner = learner;
     }
+    public Class(){}
 
     public Instructor getInstructor() {
         return instructor;
@@ -36,6 +38,11 @@ public class Class {
             this.className = className;
 
         }
-    }
+        Learner st = new Learner();
+
+
+
+        }
+
 
 

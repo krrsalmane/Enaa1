@@ -5,28 +5,35 @@ import java.util.Scanner;
 public class Application {
 
 
-    public  void main(String[] args) {
+    public  static  void main(String[] args) {
         Learner learner = new Learner();
+        Class make = new Class();
         Scanner sc = new Scanner(System.in);
         System.out.println("----------Menu pricipale ----------");
         System.out.println("1-add Ap");
         System.out.println("2-display Ap");
+        System.out.println("3-make a class");
 
-        int choix;
-        System.out.println("Enter le choix : ");
-        choix = sc.nextInt();
+
+        int choice;
+        System.out.println("Enter le choice : ");
+        choice = sc.nextInt();
         do {
-            switch (choix){
+            switch (choice){
                 case 1 :
                     learner.addlearner();
                     break;
                 case 2:
                     learner.Display();
+                    break;
+                case 3:
+                    make.make_class();
+                    break;
                 default:
                     System.out.println(" invalid choice!");
             }
 
-        }while (choix!=2);
+        }while (choice!=3);
 
     }
 

@@ -31,8 +31,51 @@ public static int id;
 
 
 
+    public void addlearner(){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first name :");
+        String firstname = sc.nextLine();
+        System.out.println("Enter the last name :");
+        String lastname = sc.nextLine();
+        System.out.println("Enter  telephone number:");
+        int numtelph = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter email :");
+        String email = sc.nextLine();
+
+        System.out.println("Enter notes  : ");
+        double notes = sc.nextDouble();
+        sc.nextLine();
+
+        Learner l = new Learner(notes,classe,firstname,lastname,id,email,numtelph);
+        learners.add(l);
+        System.out.println("---adding learner  Succeeded---");
+        id++;
 
 
     }
+    static Class recherche(String nom){
+        for (Class c : classes){
+            if(c.getClassName().equals(nom)) return c;
 
+
+
+        }
+        return null;
+
+    }
+
+
+
+    public void Display(){
+
+        System.out.println(  getFirstname());
+        System.out.println(  getLastname());
+        System.out.println(  getEmail());
+        System.out.println(  getID());
+        System.out.println(  getNumtelph());
+
+    }
+}
 
