@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.spi.AbstractResourceBundleProvider;
 
    abstract  class Person {
@@ -55,7 +56,8 @@ import java.util.spi.AbstractResourceBundleProvider;
         public void setNumtelph(int numtelph) {
             this.numtelph = numtelph;
         }
-    }
+
+       }
 
 
 

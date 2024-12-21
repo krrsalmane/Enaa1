@@ -63,13 +63,13 @@ public class Application {
 
                         System.out.println("Enter the choice : ");
                         choice = sc.nextInt();
-
+                Instructor ins = new Instructor();
                         switch (choice) {
                             case 1:
-                                learner.addlearner();
+                                ins.addInstructor();
                                 break;
                             case 2:
-                                learner.Display();
+                                ins.Display();
                                 break;
                             case 3:
                                 make.create_class();
