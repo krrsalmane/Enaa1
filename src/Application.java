@@ -5,39 +5,130 @@ import java.util.Scanner;
 public class Application {
 
 
-    public  static  void main(String[] args) {
-        Learner learner = new Learner();
-        Class make = new Class();
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("----------Menu pricipale ----------");
-        System.out.println("1-add Ap");
-        System.out.println("2-display Ap");
-        System.out.println("3-make a class");
 
-
+        Learner learner = new Learner();
         int choice;
-        System.out.println("Enter le choice : ");
-        choice = sc.nextInt();
+        Class make = new Class();
         do {
-            switch (choice){
-                case 1 :
-                    learner.addlearner();
+            System.out.println(" --- Main Menu --- ");
+            System.out.println("1. Manage Learner");
+            System.out.println("2. Manage Instructor");
+            System.out.println("3. Manage Class");
+            System.out.println("4. Exit");
+            System.out.println("enter choice: ");
+            choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    do {
+                        System.out.println("======= Learner Menu ======");
+                        System.out.println("1-Add Learner");
+                        System.out.println("2-Display the Learner");
+                        System.out.println("3-Delete Learner");
+                        System.out.println("4-Modify on Leaner");
+
+                        System.out.println("Enter the choice : ");
+                        choice = sc.nextInt();
+
+                        switch (choice) {
+                            case 1:
+                                learner.addlearner();
+                                break;
+                            case 2:
+                                learner.Display();
+                                break;
+                            case 3:
+                                //learner.delete();
+                                break;
+                            case 4:
+                                // learner.modify();
+                                break;
+
+                            default:
+                                System.out.println(" invalid choice!");
+                        }
+
+                    } while (choice != 5);
                     break;
                 case 2:
-                    learner.Display();
+                    do {
+
+                        System.out.println("======= instructor Menu ======");
+                        System.out.println("1-Add instructor");
+                        System.out.println("2-Display the instructor");
+                        System.out.println("3-Delete instructor");
+                        System.out.println("4-Modify on instructor");
+
+
+                        System.out.println("Enter the choice : ");
+                        choice = sc.nextInt();
+
+                        switch (choice) {
+                            case 1:
+                                learner.addlearner();
+                                break;
+                            case 2:
+                                learner.Display();
+                                break;
+                            case 3:
+                                make.create_class();
+                                break;
+                            case 4:
+
+                                break;
+                            case 5:
+
+                                break;
+
+                            default:
+                                System.out.println(" invalid choice!");
+                        }
+
+                    } while (choice != 6);
                     break;
                 case 3:
-                    make.make_class();
+                    do {
+
+                        System.out.println("======= Class Menu ======");
+                        System.out.println("1-create class");
+                        System.out.println("2-Display the Class");
+                        System.out.println("3-Delete Class");
+                        System.out.println("4-Modify on Class");
+
+
+                        System.out.println("Enter the choice : ");
+                        choice = sc.nextInt();
+                        Class ss = new Class();
+                        switch (choice) {
+                            case 1:
+                               ss.create_class();
+                                break;
+                            case 2:
+
+                                break;
+                            case 3:
+
+                                break;
+                            case 4:
+
+                                break;
+                            case 5:
+
+                                break;
+
+                            default:
+                                System.out.println(" invalid choice!");
+                        }
+
+                    } while (choice != 5);
+                case 4:
                     break;
-                default:
-                    System.out.println(" invalid choice!");
+
+
             }
 
-        }while (choice!=3);
-
-    }
-
-}
-
+       }while (choice != 4) ;
+    }}
 
 

@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Learner extends Person {
     private ArrayList<Double> notes;
 Class classe;
-public static int id;
+public  int id;
     static ArrayList<Class> classes = new ArrayList<>();
    static ArrayList<Learner> learners = new ArrayList<>();
 
@@ -52,29 +52,24 @@ public static int id;
         learners.add(l);
         System.out.println("---adding learner  Succeeded---");
         id++;
-
-
     }
-    static Class recherche(String nom){
-        for (Class c : classes){
-            if(c.getClassName().equals(nom)) return c;
+//    public Class recherche(String nom){
+//        for (Class c : classes){
+//            if(c.getClassName().equals(nom)) return c;
+
+//        }
+//        return null;
+//
+//    }
 
 
 
+    public void Display() {
+
+        for (Learner learner : learners) {
+            System.out.println("id: " + learner.getID() + "fistName: " + learner.getFirstname() + "lastName: " + learner.getLastname() + "Email: " + learner.getEmail() + "telephone: " + learner.getNumtelph());
         }
-        return null;
 
-    }
-
-
-
-    public void Display(){
-
-        System.out.println(  getFirstname());
-        System.out.println(  getLastname());
-        System.out.println(  getEmail());
-        System.out.println(  getID());
-        System.out.println(  getNumtelph());
 
     }
 }
