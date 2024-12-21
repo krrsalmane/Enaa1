@@ -39,10 +39,10 @@ public class Application {
                                 learner.Display();
                                 break;
                             case 3:
-                                //learner.delete();
+                                learner.Delete();
                                 break;
                             case 4:
-                                // learner.modify();
+                                 learner.Modify();
                                 break;
 
                             default:
